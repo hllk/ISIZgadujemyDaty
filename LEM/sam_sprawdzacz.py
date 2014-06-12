@@ -12,6 +12,7 @@ from przewidzenie import przewidzenie
 suma = 0
 ile = 0
 
+
 for a in sys.stdin:
     if ile%3 == 0:
         rok = int(a)
