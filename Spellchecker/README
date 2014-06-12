@@ -1,0 +1,3 @@
+sudo javac -cp .:../libs/*:.: spellchecker/Spellchecker.java
+
+sudo java -cp .:../libs/*:. spellchecker/Spellchecker < input.xml > output.txt
