@@ -5,7 +5,6 @@
 import re
 import sys
 import operator
-import glob
 import math
 
 dane1 = [(1776, 494.59, 242.27), 
