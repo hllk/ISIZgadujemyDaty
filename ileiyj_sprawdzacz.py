@@ -9,9 +9,13 @@ import sys
 import operator
 from przewidzenie import przewidzenie
 
+suma = 0
+ile = 0
+
 for a in sys.stdin:
     str = re.search(r'<.*annee="([0-9]*)".*', a)
     if str:
+        ile = ile + 1
         rok = str.group(1)
         for a in sys.stdin:
             if re.search(r'.*<texte>.*', a):
@@ -38,7 +42,10 @@ for a in sys.stdin:
                 przew =  przewidzenie(ilei, ilej, iley)                
                 print przew
                 print int(rok)-przew
+                suma = suma + abs(int(rok)-przew)
                 break
+
+print suma/ile
 
 
 
